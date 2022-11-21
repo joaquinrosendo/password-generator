@@ -1,4 +1,4 @@
-<html>
+    <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,17 +15,29 @@
             <h1>Generate a <br><span id="random-password-text">random password</span></h1>
             <h2>Never use an insecure password again.</h2>
             <form onsubmit="false">
-                <p class="pw-length-text">Enter Password Range</p>
+                <p class="pw-options-text">Enter Password Range</p>
                 <input id="pw-length-input" type="number" step="1" min="3" max="20">
+
+                <div class="pw-options-container">
+                    <input id="has-symbols" type="checkbox">
+                    <label class="pw-options-text"> No Symbols</label>
+                </div>
+                <div class="pw-options-container">
+                    <input id="has-numbers" type="checkbox">
+                    <label class="pw-options-text"> No Numbers</label>
+                </div>
+
                 <button type="button" id="pw-btn-el">Generate passwords</button>
             </form>
             <hr>
             <div class="passwords-container">
-                <div class="password-box">
+                <div class="password-box" id="pw-box-1">
                     <p id="pw1-el"></p>
+                    <span class="copy-pw-tooltip" id="copy-pw-tooltip-1">Copy Password</span>
                 </div>
-                <div class="password-box">
+                <div class="password-box" id="pw-box-2">
                     <p id="pw2-el"></p>
+                    <span class="copy-pw-tooltip" id="copy-pw-tooltip-2">Copy Password</span>
                 </div>
             </div>
             <script src="index.js"></script>
